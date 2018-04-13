@@ -19,7 +19,7 @@ public class Memtest {
 			
 			Map<String,Long> vals = resp.getValue();
 			
-	        long used = vals.get("Uptime");
+	        long used = vals.get("uptime");
 	      //  long max = vals.get("max");
 	        int usage = (int) (((used / 1000) / 60));
 	        
