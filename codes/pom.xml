@@ -2,9 +2,14 @@
   <modelVersion>4.0.0</modelVersion>
   <groupId>codes</groupId>
   <artifactId>codes</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
+  <version>1.0.0-SNAPSHOT</version>
   <build>
     <sourceDirectory>src</sourceDirectory>
+    <resources>
+      <resource>
+        <directory>C:\Users\msojka\git\codes\src</directory>
+      </resource>
+    </resources>
     <plugins>
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
