@@ -20,7 +20,7 @@ public class Code {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		//porovnat.comp(nahodne.numbers(), vstup.vstup());
+		
 		
 		
 		
