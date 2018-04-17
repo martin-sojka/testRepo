@@ -7,7 +7,7 @@
     <sourceDirectory>src</sourceDirectory>
     <resources>
       <resource>
-        <directory>C:\Users\msojka\git\codes\src</directory>
+        <directory>/home/tomcat/.jenkins/workspace/testJenkins/codes/src</directory>
       </resource>
     </resources>
     <plugins>
