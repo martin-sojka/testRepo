@@ -25,6 +25,8 @@ public class Shop implements ShopInt {
 		// TODO Auto-generated method stub
 		return false;
 	}
+
+
 	
 	
 

@@ -9,5 +9,6 @@ public interface ShopInt {
 	public Integer add();
 	
 	public boolean logOf();
-
+	
+	
 }

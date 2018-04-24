@@ -6,14 +6,16 @@ public class Users {
 	private Integer age;
 	private boolean logged;
 	
+	Goods goods = new Goods();
+			
 	public Users(String name, Integer age, boolean logged) {
 		
 		this.name = name;
 		this.age = age;
 		this.logged = logged;
-		
-		
+			
 	}
+	
 	
 	protected String getName() {
 		
@@ -21,10 +23,12 @@ public class Users {
 
 	}
 	
+	
 	protected Integer getAge() {
 		
 		return age;
 	}
+	
 	
 	protected boolean setLogged() {
 		
@@ -32,9 +36,24 @@ public class Users {
 		return logged;
 	}
 	
+	
 	protected boolean getLogged() {
 		
 		return logged;
+	}
+	
+	
+	protected Integer order(Integer howMuch) {
+		
+		return goods.getAmount(howMuch);
+				
+	}
+	
+	
+	protected Integer order() {
+		
+		return goods.getAmount();
+				
 	}
 
 }
