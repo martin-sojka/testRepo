@@ -17,40 +17,40 @@ public class Users {
 	}
 	
 	
-	protected String getName() {
+	public String getName() {
 		
 		return name;
 
 	}
 	
 	
-	protected Integer getAge() {
+	public Integer getAge() {
 		
 		return age;
 	}
 	
 	
-	protected boolean setLogged() {
+	public boolean setLogged() {
 		
 		logged = true;
 		return logged;
 	}
 	
 	
-	protected boolean getLogged() {
+	public boolean getLogged() {
 		
 		return logged;
 	}
 	
 	
-	protected Integer order(Integer howMuch) {
+	public Integer order(Integer howMuch) {
 		
 		return goods.getAmount(howMuch);
 				
 	}
 	
 	
-	protected Integer order() {
+	public Integer order() {
 		
 		return goods.getAmount();
 				
