@@ -8,6 +8,7 @@
   <modules>
       <module>codes</module>
       <module>Jolokia</module>
+      <module>testShop</module>
   </modules>
   
 </project>
