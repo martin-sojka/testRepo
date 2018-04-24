@@ -41,6 +41,11 @@
         <directory>C:\Users\msojka\git\testShop\src\</directory>
       </resource>
     </resources>
+    <testResources>
+      <testResource>
+        <directory>C:\Users\msojka\git\testShop\src\test\java</directory>
+      </testResource>
+    </testResources>
     <plugins>
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
