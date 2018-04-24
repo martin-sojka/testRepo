@@ -38,7 +38,7 @@ public class RunShop {
 		user.setLogged();
 		System.out.println("Logged: " + user.getLogged());
 		System.out.println("Goods left: " + user.order());
-		user.order(15);
+		user.order(1);
 		System.out.println("Goods left: " + user.order());
 		
 		System.out.println("----------------");
@@ -48,7 +48,7 @@ public class RunShop {
 		user1.setLogged();
 		System.out.println("Logged: " + user1.getLogged());
 		System.out.println("Goods left: " + user1.order());
-		user1.order(10);
+		user1.order(2);
 		System.out.println("Goods left: " + user1.order());
 		
 	}
