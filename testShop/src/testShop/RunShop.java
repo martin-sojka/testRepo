@@ -1,5 +1,7 @@
 package testShop;
 
+import java.lang.reflect.*;
+
 public class RunShop {
 
 	public static void main(String[] args) {
@@ -50,6 +52,20 @@ public class RunShop {
 		System.out.println("Goods left: " + user1.order());
 		user1.order(2);
 		System.out.println("Goods left: " + user1.order());
+		
+		System.out.println("----------------");
+		
+		try {
+			Class<?> c = Class.forName("testShop.Users");
+			Method m[] = c.getDeclaredMethods();
+			for (int i = 0; i < m.length; i++)
+	            System.out.println(m[i].getName());
+	         }
+	         catch (Throwable e) {
+	            System.err.println(e);
+	         }
+	      
+		
 		
 	}
 

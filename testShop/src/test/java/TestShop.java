@@ -10,6 +10,7 @@ import static org.mockito.Mockito.*;
 
 public class TestShop {
 	
+	
 	Users testUsers = new Users("Pepa", 55, false);
 	Users tUser = mock(Users.class);
 
