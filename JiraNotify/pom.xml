@@ -1,0 +1,146 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  
+ <!-- <parent>
+		<groupId>build_all</groupId>
+		<artifactId>build-all</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+   </parent> -->
+   
+   <repositories>
+<repository>
+<id>atlassian-public</id>
+<url>https://maven.atlassian.com/repository/public</url>
+<snapshots>
+<enabled>true</enabled>
+<updatePolicy>never</updatePolicy>
+<checksumPolicy>warn</checksumPolicy>
+</snapshots>
+<releases>
+<enabled>true</enabled>
+<checksumPolicy>warn</checksumPolicy>
+</releases>
+</repository>
+</repositories>
+  
+  <groupId>JiraNotify</groupId>
+  <artifactId>JiraNotify</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
+  
+  <dependencies>
+		<!-- https://mvnrepository.com/artifact/com.sun.jersey/jersey-client -->
+	<dependency>
+    	<groupId>com.sun.jersey</groupId>
+    	<artifactId>jersey-client</artifactId>
+    	<version>1.19.4</version>
+	</dependency>
+	
+<!-- https://mvnrepository.com/artifact/com.atlassian.jira/jira-rest-java-client-api -->
+<dependency>
+    <groupId>com.atlassian.jira</groupId>
+    <artifactId>jira-rest-java-client-api</artifactId>
+    <version>4.0.0</version>
+    <type>pom</type>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/com.atlassian.jira/jira-rest-java-client-core -->
+	<dependency>
+    	<groupId>com.atlassian.jira</groupId>
+    	<artifactId>jira-rest-java-client-core</artifactId>
+    	<version>4.0.0</version>
+   		<!-- <type>pom</type> -->
+	</dependency>
+
+	<!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
+<!-- 	<dependency>
+    	<groupId>com.google.guava</groupId>
+    	<artifactId>guava</artifactId>
+    	<version>24.1-jre</version>
+	</dependency> -->
+
+	<dependency>
+			<groupId>com.google.guava</groupId>
+			<artifactId>guava</artifactId>
+			<version>14.0-rc1</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.codehaus.jettison</groupId>
+			<artifactId>jettison</artifactId>
+			<version>1.0.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-simple</artifactId>
+			<version>1.6.4</version>
+		</dependency>
+		<dependency>
+			<groupId>commons-io</groupId>
+			<artifactId>commons-io</artifactId>
+			<version>2.4</version>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/com.atlassian.fugue/fugue -->
+	<dependency>
+    	<groupId>com.atlassian.fugue</groupId>
+    	<artifactId>fugue</artifactId>
+    	<version>2.6.1</version>
+    	<scope>provided</scope>
+	</dependency>
+		
+
+</dependencies>
+  
+  <build>
+    <sourceDirectory>src</sourceDirectory>
+    <resources>
+      <resource>
+        <directory>C:\Users\msojka\eclipse-workspace\JiraNotify\src\</directory>
+      </resource>
+    </resources>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.7.0</version>
+        <configuration>
+          <source>1.8</source>
+          <target>1.8</target>
+        </configuration>
+      </plugin>
+      
+      <plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-dependency-plugin</artifactId>
+    <executions>
+        <execution>
+            <id>copy-dependencies</id>
+            <phase>prepare-package</phase>
+            <goals>
+                <goal>copy-dependencies</goal>
+            </goals>
+            <configuration>
+                <outputDirectory>C:\Users\msojka\eclipse-workspace\JiraNotify\lib</outputDirectory>
+                <overWriteReleases>false</overWriteReleases>
+                <overWriteSnapshots>false</overWriteSnapshots>
+                <overWriteIfNewer>true</overWriteIfNewer>
+            </configuration>
+        </execution>
+    </executions>
+</plugin>
+<plugin>
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-jar-plugin</artifactId>
+    <configuration>
+        <archive>
+            <manifest>
+                <addClasspath>true</addClasspath>
+                <classpathPrefix>lib/</classpathPrefix>
+                <mainClass>theMainClass</mainClass>
+            </manifest>
+        </archive>
+    </configuration>
+</plugin>
+      
+    </plugins>
+  </build>
+</project>

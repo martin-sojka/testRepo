@@ -18,5 +18,6 @@
 	</classpathentry>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry kind="lib" path="C:/Users/msojka/Downloads/mockito-all-1.9.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/msojka/Downloads/postgresql-42.2.2.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>

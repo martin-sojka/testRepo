@@ -9,6 +9,7 @@
       <module>codes</module>
       <module>Jolokia</module>
       <module>testShop</module>
+      <module>..\eclipse-workspace\JiraNotify</module>
   </modules>
   
 </project>

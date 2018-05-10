@@ -16,6 +16,9 @@ public class Goods {
 	
 	protected Integer getAmount() {
 		
+		//DbConn connection = new DbConn();
+		//connection.connect();
+		
 		if (amount <= 0) {
 			System.exit(1);
 			return amount;
