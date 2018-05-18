@@ -1,17 +1,13 @@
 package testShop;
 
-import java.awt.AWTException;
-import java.awt.Image;
-import java.awt.SystemTray;
-import java.awt.Toolkit;
-import java.awt.TrayIcon;
-import java.awt.TrayIcon.MessageType;
-import java.lang.reflect.*;
-import java.net.MalformedURLException;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
 
 public class RunShop {
 
-	public static void main(String[] args) throws MalformedURLException, AWTException {
+	
+	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
 	/*	Users user = new Users("Martin", 20, false);
@@ -73,35 +69,53 @@ public class RunShop {
 	         }
 	      */
 		
+		// ----------------------------------------------------------
+		
 	/*	DbConn connection = new DbConn();
 		connection.connect(); */
 		
+		// -----------------------------------------------------------
 		
-		if (SystemTray.isSupported()) {
-            RunShop td = new RunShop();
-            td.displayTray();
-        } else {
-            System.err.println("System tray not supported!");
-        }		
+	/*	String[] c = {"jedna", "dve", "tri"}; 
+		String[] d = {"ctyri", "pet", "sest"};
+		List<String> list = new ArrayList<>(Arrays.asList(c));
+		List<String> list2 = new ArrayList<>(Arrays.asList(d));
+		
+		System.out.println(list.toString());
+		
+		list2.addAll(list); // add elements from list to list2
+		
+		for (Object o : list2)
+			System.out.println(o); 
+		
+		for (Iterator<?> iterator = list.iterator(); iterator.hasNext(); ) {
+			if (iterator.next() != null)
+				iterator.remove();
+		}
+		
+		System.out.println(list.toString()); */
+		
+		// ------------------------------------------------------------
+		
+		Integer pocet = 0;
+		
+		try {
+			Scanner s = new Scanner(new File("C:\\Users\\msojka\\git\\testShop\\src\\testShop\\readFile.txt"));
+			while (s.hasNext()) {
+				 pocet += 1;
+				 s.next();
+			}
+			
+			s.close();
+			System.out.print(pocet);
+			
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+				
 	}
-	
-	public void displayTray() throws AWTException, MalformedURLException {
-        //Obtain only one instance of the SystemTray object
-        SystemTray tray = SystemTray.getSystemTray();
-
-        //If the icon is a file
-        Image image = Toolkit.getDefaultToolkit().createImage("icon.png");
-        //Alternative (if the icon is on the classpath):
-        //Image image = Toolkit.getToolkit().createImage(getClass().getResource("icon.png"));
-
-        TrayIcon trayIcon = new TrayIcon(image, "Tray Demo");
-        //Let the system resize the image if needed
-        trayIcon.setImageAutoSize(true);
-        //Set tooltip text for the tray icon
-        trayIcon.setToolTip("System tray icon demo");
-        tray.add(trayIcon);
-
-        trayIcon.displayMessage("Hello, World", "notification demo", MessageType.INFO);
-    }
 
 }

@@ -22,5 +22,6 @@
 	<classpathentry kind="lib" path="C:/Users/msojka/Downloads/atlassian-util-concurrent-3.0.0.jar"/>
 	<classpathentry kind="lib" path="C:/Users/msojka/Downloads/fugue-2.6.1.jar"/>
 	<classpathentry kind="lib" path="C:/Users/msojka/Downloads/guava-14.0-rc1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/msojka/Downloads/confluence-6.8.1.jar"/>
 	<classpathentry kind="output" path="target/classes"/>
 </classpath>
