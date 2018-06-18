@@ -41,9 +41,8 @@ public class SysTray {
         trayIcon.setToolTip("System tray icon demo");
         tray.add(trayIcon);
         
-
-     
-        
+      
+             
         try {
     		URI uri = new URI(jira_url);
     		final JiraRestClientFactory factory = new AsynchronousJiraRestClientFactory();
@@ -61,11 +60,12 @@ public class SysTray {
     	//	System.out.println(String.format(jira_user.getEmailAddress()));
     		
     		// Promise<SearchResult> search = rc.getSearchClient().searchJql("project = IIS AND issuetype in (Bug, \"IT Help\", \"Service Request\", \"Service Request with Approvals\", Task, Sub-task) AND status in (\"In Progress\", Open, \"Waiting for 3rd Party\", \"Waiting for Approval\", \"Waiting for Client\") AND assignee in (L2, Lubomir.zalesak, martin.sojka, Tomas.lachout) order by created DESC");
-    		Promise<SearchResult> search = rc.getSearchClient().searchJql("text ~ \"odchod\" order by created DESC");
+    		// Promise<SearchResult> search = rc.getSearchClient().searchJql("text ~ \"odchod\" order by created DESC");
+    		 Promise<SearchResult> search = rc.getSearchClient().searchJql("project = IIS AND status in (Canceled, Closed, \"In Progress\", Open, Resolved, \"Waiting for 3rd Party\", \"Waiting for Approval\", \"Waiting for Client\") ORDER BY labels DESC, created DESC");
     			for (Issue issue : search.claim().getIssues()) {
-    				//System.out.println(issue.getKey() + " - " + issue.getSummary());
-    				String name = issue.getSummary();
-    				between(name);
+    				System.out.println(issue.getKey());
+    				//String name = issue.getSummary();
+    				//between(name);
     				//	trayIcon.displayMessage(issue.getKey(), issue.getSummary() , MessageType.INFO);
     				}
     			
@@ -78,7 +78,7 @@ public class SysTray {
         
     }
 	
-	public void between (String name) {
+	/*public void between (String name) {
 		
 		String jmeno = "Jiří Draška";
 		Integer pomJmeno = 0;
@@ -107,7 +107,7 @@ public class SysTray {
 					System.out.println(true);
 				else
 					System.out.println(false);
-		}
+		} */
 		
 		
 		}
