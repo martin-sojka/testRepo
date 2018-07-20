@@ -78,7 +78,7 @@ public class SysTray {
         
     }
 	
-	/*public void between (String name) {
+	public void between (String name) {
 		
 		String jmeno = "Jiří Draška";
 		Integer pomJmeno = 0;
@@ -107,7 +107,7 @@ public class SysTray {
 					System.out.println(true);
 				else
 					System.out.println(false);
-		} */
+		} 
 		
 		
 		}

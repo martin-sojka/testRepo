@@ -4,7 +4,7 @@ public class Rule {
 
 	public static void main(String[] args) {
 		
-		long n = 10;
+		long n = 7;
 		long k = 4;
 		long pomN = n;
 		long pomK = k;
