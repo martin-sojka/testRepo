@@ -4,7 +4,6 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.logging.Logger;
 import java.sql.Connection;
 
 
@@ -18,8 +17,6 @@ public class OracleDB {
 	public static Connection conn;
 	private static OracleDB connection;
 	
-	static Logger log = Logger.getLogger(OracleDB.class.getName());
-	
 	private OracleDB() {
 				
 	}
@@ -29,9 +26,7 @@ public class OracleDB {
 		dbUser = user;
 		dbPass = passwd;
 		String pass = new String(passwd);
-		
-		log.fine("test log message");
-		
+				
 		DriverManager.registerDriver(new oracle.jdbc.driver.OracleDriver());
 		conn = DriverManager.getConnection(dbUrl, dbUser, pass);
 			

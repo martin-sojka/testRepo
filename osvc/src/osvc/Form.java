@@ -14,10 +14,11 @@ import java.util.Calendar;
 import java.util.GregorianCalendar;
 
 
+
 public class Form {
 	
 	OracleDB oDB;
-	
+		
 	public void Formular() {
 		
 // add JFrame
@@ -166,7 +167,7 @@ public class Form {
 			public void actionPerformed(ActionEvent e) {
 				
 				String month = (String) comboBox.getSelectedItem();
-				
+								
 				try {
 				OracleDB.delete(month);
 				} catch (Exception e2) {
