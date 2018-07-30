@@ -13,10 +13,8 @@ public class OracleDB {
 	public static final String dbUrl = "jdbc:oracle:thin:@WMCL263.wmc.local:1521:XE";
 	public static String dbUser = null;
 	public static char[] dbPass = null;
-	
 	public static Connection conn;
-	private static OracleDB connection;
-	
+		
 	private OracleDB() {
 				
 	}
